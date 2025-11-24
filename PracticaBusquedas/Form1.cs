@@ -24,6 +24,13 @@ namespace PracticaBusquedas
         //Ejercicio 3
         private List<Estudiante> estudiantes = new List<Estudiante>();
 
+        //Ejercicio 5
+        private List<int> lista5 = new List<int>();
+
+        //Ejercicio 6
+        private int[,] matriz6 = new int[10, 10];
+
+        // Generador global de números aleatorios para todos los ejercicios
         Random rnd = new Random();
 
         
@@ -73,7 +80,7 @@ namespace PracticaBusquedas
 
               
                 if (posicion != -1)
-                    MessageBox.Show($"¡Listo, mae! El número {numeroBuscado} está en la posición {posicion}");
+                    MessageBox.Show($"¡Listo mae! El número {numeroBuscado} está en la posición {posicion}");
                 else
                     MessageBox.Show($"Broder, no encontré el número {numeroBuscado} en el arreglo");
             }
@@ -87,7 +94,7 @@ namespace PracticaBusquedas
         {
 
         }
-        //Ejercicio 2
+        //Ejercicio 2: Búsqueda de texto dentro de una cadena
         private void btnGenerar2_Click(object sender, EventArgs e)
         {
             numbers.Clear();
@@ -181,7 +188,7 @@ namespace PracticaBusquedas
             lblResultado2.Text = "Lista ordenada.";
         }
 
-        //Ejercicio 3
+        //Ejercicio 3: Búsqueda de texto dentro de una cadena
 
         private void btnBuscarTexto3_Click(object sender, EventArgs e)
         {
@@ -190,7 +197,7 @@ namespace PracticaBusquedas
 
             if (string.IsNullOrEmpty(parrafo) || string.IsNullOrEmpty(palabra))
             {
-                MessageBox.Show("Meté un párrafo y una palabra, mae.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Meté un párrafo y una palabra mae.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -206,7 +213,7 @@ namespace PracticaBusquedas
 
             if (string.IsNullOrEmpty(parrafo))
             {
-                MessageBox.Show("Meté un párrafo primero, mae.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Meté un párrafo primero mae.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -249,7 +256,7 @@ namespace PracticaBusquedas
             return contador;
         }
 
-        //Ejercicio 4
+        //Ejercicio 4:  Búsqueda de objetos en una colección
 
         private void btnGenerarEstudiantes_Click(object sender, EventArgs e)
         {
@@ -336,6 +343,150 @@ namespace PracticaBusquedas
                 MessageBox.Show($"Estudiante encontrado: {encontrado.Nombre} (ID {encontrado.Id})", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show($"No se encontró estudiante con el nombre '{nombreBuscado}'.", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        //Ejercicio 5: Búsqueda del valor máximo y mínimo
+        private void btnGenerarLista5_Click(object sender, EventArgs e)
+        {
+            lista5.Clear();
+            lbLista5.Items.Clear();
+
+            // Generar 20 números aleatorios
+            for (int i = 0; i < 20; i++)
+            {
+                int num = rnd.Next(1, 101);
+                lista5.Add(num);
+                lbLista5.Items.Add(num);
+            }
+
+            MessageBox.Show("Lista generada mae.", "Confirmación",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnBuscarMazMin5_Click(object sender, EventArgs e)
+        {
+            if (lista5.Count == 0)
+            {
+                MessageBox.Show("Generá la lista primero chele.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int max = lista5[0];
+            int min = lista5[0];
+            int iteraciones = 0;
+
+            // Recorrido manual SIN usar Max() ni Min()
+            for (int i = 0; i < lista5.Count; i++)
+            {
+                int valor = lista5[i];
+                iteraciones++;
+
+                if (valor > max)
+                    max = valor;
+
+                if (valor < min)
+                    min = valor;
+            }
+
+            MessageBox.Show(
+                $"Valor máximo: {max}\n" +
+                $"Valor mínimo: {min}\n" +
+                $"Iteraciones realizadas: {iteraciones}",
+                "Resultado",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        private void btnGenerarMatriz6_Click(object sender, EventArgs e)
+        {
+            // Evitar fila de edición al final que desordena los índices
+            dgMatriz6.AllowUserToAddRows = false;
+            dgMatriz6.Rows.Clear();
+            dgMatriz6.Columns.Clear();
+
+            // Crear exactamente 10 columnas
+            for (int c = 0; c < 10; c++)
+            {
+                dgMatriz6.Columns.Add("C" + c, (c + 1).ToString()); // encabezado visible 1..10
+            }
+
+            // Añadir 10 filas
+            dgMatriz6.RowCount = 10;
+
+            // Llenar la matriz y el grid
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    matriz6[i, j] = rnd.Next(1, 101);
+                    dgMatriz6.Rows[i].Cells[j].Value = matriz6[i, j];
+                    // Resetear color por si quedó resaltado de búsquedas previas
+                    dgMatriz6.Rows[i].Cells[j].Style.BackColor = Color.White;
+                }
+            }
+
+            MessageBox.Show("Matriz 10x10 generada.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnBuscarMatriz6_Click(object sender, EventArgs e)
+        {
+            // Validar entrada
+            if (!int.TryParse(tbNumero6.Text.Trim(), out int objetivo))
+            {
+                MessageBox.Show("Meté un número válido pues.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Asegurarse de que el grid tenga exactamente 10x10
+            int filas = dgMatriz6.RowCount;
+            int columnas = dgMatriz6.ColumnCount;
+
+            bool encontrado = false;
+            int iteraciones = 0;
+            List<string> posiciones = new List<string>();
+
+            // Limpiar resaltados previos
+            for (int r = 0; r < filas; r++)
+                for (int c = 0; c < columnas; c++)
+                    dgMatriz6.Rows[r].Cells[c].Style.BackColor = Color.White;
+
+            // Recorrido exhaustivo: recorrer la matriz y el grid por los mismos índices
+            for (int i = 0; i < filas; i++)
+            {
+                for (int j = 0; j < columnas; j++)
+                {
+                    iteraciones++;
+
+                    object cellVal = dgMatriz6.Rows[i].Cells[j].Value;
+                    if (cellVal == null) continue;
+
+                    if (int.TryParse(cellVal.ToString(), out int valor))
+                    {
+                        if (valor == objetivo)
+                        {
+                            encontrado = true;
+                            // Resaltar celda
+                            dgMatriz6.Rows[i].Cells[j].Style.BackColor = Color.Yellow;
+                            // Guardar posición en formato humano (1-based)
+                            posiciones.Add($"(fila {i + 1}, col {j + 1})");
+                        }
+                    }
+                }
+            }
+
+            // Mostrar resultado
+            if (encontrado)
+            {
+                string posText = string.Join(", ", posiciones);
+                MessageBox.Show($"Número {objetivo} encontrado en: {posText}\nIteraciones: {iteraciones}", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"No encontré el número {objetivo}.\nIteraciones: {iteraciones}", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
     }
 }
