@@ -37,6 +37,8 @@
             this.lblNumeros = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tb2 = new System.Windows.Forms.TabPage();
+            this.btnOrdenar2 = new System.Windows.Forms.Button();
+            this.btnGenerar2 = new System.Windows.Forms.Button();
             this.lblResultado2 = new System.Windows.Forms.Label();
             this.lbNumeros2 = new System.Windows.Forms.ListBox();
             this.btnBuscar2 = new System.Windows.Forms.Button();
@@ -47,11 +49,27 @@
             this.tb4 = new System.Windows.Forms.TabPage();
             this.tb5 = new System.Windows.Forms.TabPage();
             this.tb6 = new System.Windows.Forms.TabPage();
-            this.btnGenerar2 = new System.Windows.Forms.Button();
-            this.btnOrdenar2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbParrafo3 = new System.Windows.Forms.TextBox();
+            this.tbPalabra3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnBuscarTexto3 = new System.Windows.Forms.Button();
+            this.lbParrafo3 = new System.Windows.Forms.ListBox();
+            this.btnMostrarParrafo3 = new System.Windows.Forms.Button();
+            this.lbEstudiantes4 = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
+            this.tbID4 = new System.Windows.Forms.TextBox();
+            this.tbNombre4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnGenerarEstudiantes = new System.Windows.Forms.Button();
+            this.btnBuscarPorID4 = new System.Windows.Forms.Button();
+            this.btnBuscarPorNombre4 = new System.Windows.Forms.Button();
             this.Ejercicio2.SuspendLayout();
             this.tb1.SuspendLayout();
             this.tb2.SuspendLayout();
+            this.tb3.SuspendLayout();
+            this.tb4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Ejercicio2
@@ -161,6 +179,26 @@
             this.tb2.Text = "Ejercicio2";
             this.tb2.UseVisualStyleBackColor = true;
             // 
+            // btnOrdenar2
+            // 
+            this.btnOrdenar2.Location = new System.Drawing.Point(301, 103);
+            this.btnOrdenar2.Name = "btnOrdenar2";
+            this.btnOrdenar2.Size = new System.Drawing.Size(108, 40);
+            this.btnOrdenar2.TabIndex = 11;
+            this.btnOrdenar2.Text = "Ordenar";
+            this.btnOrdenar2.UseVisualStyleBackColor = true;
+            this.btnOrdenar2.Click += new System.EventHandler(this.btnOrdenar2_Click);
+            // 
+            // btnGenerar2
+            // 
+            this.btnGenerar2.Location = new System.Drawing.Point(301, 34);
+            this.btnGenerar2.Name = "btnGenerar2";
+            this.btnGenerar2.Size = new System.Drawing.Size(108, 40);
+            this.btnGenerar2.TabIndex = 10;
+            this.btnGenerar2.Text = "Generar";
+            this.btnGenerar2.UseVisualStyleBackColor = true;
+            this.btnGenerar2.Click += new System.EventHandler(this.btnGenerar2_Click);
+            // 
             // lblResultado2
             // 
             this.lblResultado2.AutoSize = true;
@@ -218,6 +256,13 @@
             // 
             // tb3
             // 
+            this.tb3.Controls.Add(this.btnMostrarParrafo3);
+            this.tb3.Controls.Add(this.lbParrafo3);
+            this.tb3.Controls.Add(this.btnBuscarTexto3);
+            this.tb3.Controls.Add(this.tbPalabra3);
+            this.tb3.Controls.Add(this.label5);
+            this.tb3.Controls.Add(this.tbParrafo3);
+            this.tb3.Controls.Add(this.label4);
             this.tb3.Location = new System.Drawing.Point(4, 29);
             this.tb3.Name = "tb3";
             this.tb3.Padding = new System.Windows.Forms.Padding(3);
@@ -228,6 +273,15 @@
             // 
             // tb4
             // 
+            this.tb4.Controls.Add(this.btnBuscarPorNombre4);
+            this.tb4.Controls.Add(this.btnBuscarPorID4);
+            this.tb4.Controls.Add(this.btnGenerarEstudiantes);
+            this.tb4.Controls.Add(this.tbNombre4);
+            this.tb4.Controls.Add(this.label7);
+            this.tb4.Controls.Add(this.tbID4);
+            this.tb4.Controls.Add(this.lbl);
+            this.tb4.Controls.Add(this.label6);
+            this.tb4.Controls.Add(this.lbEstudiantes4);
             this.tb4.Location = new System.Drawing.Point(4, 29);
             this.tb4.Name = "tb4";
             this.tb4.Padding = new System.Windows.Forms.Padding(3);
@@ -256,25 +310,153 @@
             this.tb6.Text = "Ejercicio6";
             this.tb6.UseVisualStyleBackColor = true;
             // 
-            // btnGenerar2
+            // label4
             // 
-            this.btnGenerar2.Location = new System.Drawing.Point(301, 34);
-            this.btnGenerar2.Name = "btnGenerar2";
-            this.btnGenerar2.Size = new System.Drawing.Size(108, 40);
-            this.btnGenerar2.TabIndex = 10;
-            this.btnGenerar2.Text = "Generar";
-            this.btnGenerar2.UseVisualStyleBackColor = true;
-            this.btnGenerar2.Click += new System.EventHandler(this.btnGenerar2_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(201, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ingresar Parrafo";
             // 
-            // btnOrdenar2
+            // tbParrafo3
             // 
-            this.btnOrdenar2.Location = new System.Drawing.Point(301, 103);
-            this.btnOrdenar2.Name = "btnOrdenar2";
-            this.btnOrdenar2.Size = new System.Drawing.Size(108, 40);
-            this.btnOrdenar2.TabIndex = 11;
-            this.btnOrdenar2.Text = "Ordenar";
-            this.btnOrdenar2.UseVisualStyleBackColor = true;
-            this.btnOrdenar2.Click += new System.EventHandler(this.btnOrdenar2_Click);
+            this.tbParrafo3.Location = new System.Drawing.Point(42, 58);
+            this.tbParrafo3.Multiline = true;
+            this.tbParrafo3.Name = "tbParrafo3";
+            this.tbParrafo3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbParrafo3.Size = new System.Drawing.Size(237, 30);
+            this.tbParrafo3.TabIndex = 1;
+            // 
+            // tbPalabra3
+            // 
+            this.tbPalabra3.Location = new System.Drawing.Point(43, 144);
+            this.tbPalabra3.Name = "tbPalabra3";
+            this.tbPalabra3.Size = new System.Drawing.Size(237, 26);
+            this.tbPalabra3.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(39, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 29);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Buscar palabra";
+            // 
+            // btnBuscarTexto3
+            // 
+            this.btnBuscarTexto3.Location = new System.Drawing.Point(42, 188);
+            this.btnBuscarTexto3.Name = "btnBuscarTexto3";
+            this.btnBuscarTexto3.Size = new System.Drawing.Size(111, 44);
+            this.btnBuscarTexto3.TabIndex = 4;
+            this.btnBuscarTexto3.Text = "Buscar Texto";
+            this.btnBuscarTexto3.UseVisualStyleBackColor = true;
+            this.btnBuscarTexto3.Click += new System.EventHandler(this.btnBuscarTexto3_Click);
+            // 
+            // lbParrafo3
+            // 
+            this.lbParrafo3.FormattingEnabled = true;
+            this.lbParrafo3.ItemHeight = 20;
+            this.lbParrafo3.Location = new System.Drawing.Point(349, 26);
+            this.lbParrafo3.Name = "lbParrafo3";
+            this.lbParrafo3.Size = new System.Drawing.Size(279, 304);
+            this.lbParrafo3.TabIndex = 6;
+            // 
+            // btnMostrarParrafo3
+            // 
+            this.btnMostrarParrafo3.Location = new System.Drawing.Point(44, 266);
+            this.btnMostrarParrafo3.Name = "btnMostrarParrafo3";
+            this.btnMostrarParrafo3.Size = new System.Drawing.Size(129, 44);
+            this.btnMostrarParrafo3.TabIndex = 8;
+            this.btnMostrarParrafo3.Text = "Mostrar Parrafo";
+            this.btnMostrarParrafo3.UseVisualStyleBackColor = true;
+            this.btnMostrarParrafo3.Click += new System.EventHandler(this.btnMostrarParrafo3_Click);
+            // 
+            // lbEstudiantes4
+            // 
+            this.lbEstudiantes4.FormattingEnabled = true;
+            this.lbEstudiantes4.ItemHeight = 20;
+            this.lbEstudiantes4.Location = new System.Drawing.Point(450, 85);
+            this.lbEstudiantes4.Name = "lbEstudiantes4";
+            this.lbEstudiantes4.Size = new System.Drawing.Size(211, 244);
+            this.lbEstudiantes4.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(432, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(246, 29);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Lista de estudiantes";
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(27, 53);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(38, 29);
+            this.lbl.TabIndex = 2;
+            this.lbl.Text = "ID";
+            // 
+            // tbID4
+            // 
+            this.tbID4.Location = new System.Drawing.Point(32, 85);
+            this.tbID4.Name = "tbID4";
+            this.tbID4.Size = new System.Drawing.Size(176, 26);
+            this.tbID4.TabIndex = 3;
+            // 
+            // tbNombre4
+            // 
+            this.tbNombre4.Location = new System.Drawing.Point(32, 168);
+            this.tbNombre4.Name = "tbNombre4";
+            this.tbNombre4.Size = new System.Drawing.Size(176, 26);
+            this.tbNombre4.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(27, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 29);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Nombre";
+            // 
+            // btnGenerarEstudiantes
+            // 
+            this.btnGenerarEstudiantes.Location = new System.Drawing.Point(336, 85);
+            this.btnGenerarEstudiantes.Name = "btnGenerarEstudiantes";
+            this.btnGenerarEstudiantes.Size = new System.Drawing.Size(91, 50);
+            this.btnGenerarEstudiantes.TabIndex = 6;
+            this.btnGenerarEstudiantes.Text = "Generar Estudiantes";
+            this.btnGenerarEstudiantes.UseVisualStyleBackColor = true;
+            this.btnGenerarEstudiantes.Click += new System.EventHandler(this.btnGenerarEstudiantes_Click);
+            // 
+            // btnBuscarPorID4
+            // 
+            this.btnBuscarPorID4.Location = new System.Drawing.Point(32, 221);
+            this.btnBuscarPorID4.Name = "btnBuscarPorID4";
+            this.btnBuscarPorID4.Size = new System.Drawing.Size(102, 50);
+            this.btnBuscarPorID4.TabIndex = 7;
+            this.btnBuscarPorID4.Text = "Buscar ID";
+            this.btnBuscarPorID4.UseVisualStyleBackColor = true;
+            this.btnBuscarPorID4.Click += new System.EventHandler(this.btnBuscarPorID4_Click);
+            // 
+            // btnBuscarPorNombre4
+            // 
+            this.btnBuscarPorNombre4.Location = new System.Drawing.Point(149, 221);
+            this.btnBuscarPorNombre4.Name = "btnBuscarPorNombre4";
+            this.btnBuscarPorNombre4.Size = new System.Drawing.Size(109, 61);
+            this.btnBuscarPorNombre4.TabIndex = 8;
+            this.btnBuscarPorNombre4.Text = "Buscar Nombre";
+            this.btnBuscarPorNombre4.UseVisualStyleBackColor = true;
+            this.btnBuscarPorNombre4.Click += new System.EventHandler(this.btnBuscarPorNombre4_Click);
             // 
             // Form1
             // 
@@ -289,6 +471,10 @@
             this.tb1.PerformLayout();
             this.tb2.ResumeLayout(false);
             this.tb2.PerformLayout();
+            this.tb3.ResumeLayout(false);
+            this.tb3.PerformLayout();
+            this.tb4.ResumeLayout(false);
+            this.tb4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -316,6 +502,22 @@
         private System.Windows.Forms.Label lblResultado2;
         private System.Windows.Forms.Button btnGenerar2;
         private System.Windows.Forms.Button btnOrdenar2;
+        private System.Windows.Forms.TextBox tbParrafo3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbPalabra3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnBuscarTexto3;
+        private System.Windows.Forms.ListBox lbParrafo3;
+        private System.Windows.Forms.Button btnMostrarParrafo3;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox lbEstudiantes4;
+        private System.Windows.Forms.Button btnBuscarPorNombre4;
+        private System.Windows.Forms.Button btnBuscarPorID4;
+        private System.Windows.Forms.Button btnGenerarEstudiantes;
+        private System.Windows.Forms.TextBox tbNombre4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbID4;
     }
 }
 
