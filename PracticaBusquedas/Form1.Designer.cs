@@ -37,12 +37,18 @@
             this.lblNumeros = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tb2 = new System.Windows.Forms.TabPage();
+            this.lblResultado2 = new System.Windows.Forms.Label();
+            this.lbNumeros2 = new System.Windows.Forms.ListBox();
+            this.btnBuscar2 = new System.Windows.Forms.Button();
+            this.tbBuscar2 = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tb3 = new System.Windows.Forms.TabPage();
             this.tb4 = new System.Windows.Forms.TabPage();
             this.tb5 = new System.Windows.Forms.TabPage();
             this.tb6 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.NumAleatorios = new System.Windows.Forms.Label();
+            this.btnGenerar2 = new System.Windows.Forms.Button();
+            this.btnOrdenar2 = new System.Windows.Forms.Button();
             this.Ejercicio2.SuspendLayout();
             this.tb1.SuspendLayout();
             this.tb2.SuspendLayout();
@@ -139,7 +145,13 @@
             // 
             // tb2
             // 
-            this.tb2.Controls.Add(this.NumAleatorios);
+            this.tb2.Controls.Add(this.btnOrdenar2);
+            this.tb2.Controls.Add(this.btnGenerar2);
+            this.tb2.Controls.Add(this.lblResultado2);
+            this.tb2.Controls.Add(this.lbNumeros2);
+            this.tb2.Controls.Add(this.btnBuscar2);
+            this.tb2.Controls.Add(this.tbBuscar2);
+            this.tb2.Controls.Add(this.lblBuscar);
             this.tb2.Controls.Add(this.label3);
             this.tb2.Location = new System.Drawing.Point(4, 29);
             this.tb2.Name = "tb2";
@@ -148,6 +160,61 @@
             this.tb2.TabIndex = 1;
             this.tb2.Text = "Ejercicio2";
             this.tb2.UseVisualStyleBackColor = true;
+            // 
+            // lblResultado2
+            // 
+            this.lblResultado2.AutoSize = true;
+            this.lblResultado2.Location = new System.Drawing.Point(38, 247);
+            this.lblResultado2.Name = "lblResultado2";
+            this.lblResultado2.Size = new System.Drawing.Size(137, 20);
+            this.lblResultado2.TabIndex = 9;
+            this.lblResultado2.Text = "                                ";
+            // 
+            // lbNumeros2
+            // 
+            this.lbNumeros2.FormattingEnabled = true;
+            this.lbNumeros2.ItemHeight = 20;
+            this.lbNumeros2.Location = new System.Drawing.Point(452, 84);
+            this.lbNumeros2.Name = "lbNumeros2";
+            this.lbNumeros2.Size = new System.Drawing.Size(212, 244);
+            this.lbNumeros2.TabIndex = 7;
+            // 
+            // btnBuscar2
+            // 
+            this.btnBuscar2.Location = new System.Drawing.Point(301, 175);
+            this.btnBuscar2.Name = "btnBuscar2";
+            this.btnBuscar2.Size = new System.Drawing.Size(108, 40);
+            this.btnBuscar2.TabIndex = 6;
+            this.btnBuscar2.Text = "Buscar";
+            this.btnBuscar2.UseVisualStyleBackColor = true;
+            this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
+            // 
+            // tbBuscar2
+            // 
+            this.tbBuscar2.Location = new System.Drawing.Point(31, 189);
+            this.tbBuscar2.Name = "tbBuscar2";
+            this.tbBuscar2.Size = new System.Drawing.Size(178, 26);
+            this.tbBuscar2.TabIndex = 5;
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Location = new System.Drawing.Point(26, 142);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(93, 29);
+            this.lblBuscar.TabIndex = 4;
+            this.lblBuscar.Text = "Buscar";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 29);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Numeros Aleatorios";
             // 
             // tb3
             // 
@@ -189,26 +256,25 @@
             this.tb6.Text = "Ejercicio6";
             this.tb6.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnGenerar2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 29);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Numeros Aleatorios";
+            this.btnGenerar2.Location = new System.Drawing.Point(301, 34);
+            this.btnGenerar2.Name = "btnGenerar2";
+            this.btnGenerar2.Size = new System.Drawing.Size(108, 40);
+            this.btnGenerar2.TabIndex = 10;
+            this.btnGenerar2.Text = "Generar";
+            this.btnGenerar2.UseVisualStyleBackColor = true;
+            this.btnGenerar2.Click += new System.EventHandler(this.btnGenerar2_Click);
             // 
-            // NumAleatorios
+            // btnOrdenar2
             // 
-            this.NumAleatorios.AutoSize = true;
-            this.NumAleatorios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NumAleatorios.Location = new System.Drawing.Point(31, 79);
-            this.NumAleatorios.Name = "NumAleatorios";
-            this.NumAleatorios.Size = new System.Drawing.Size(179, 22);
-            this.NumAleatorios.TabIndex = 1;
-            this.NumAleatorios.Text = "                                          ";
-            this.NumAleatorios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnOrdenar2.Location = new System.Drawing.Point(301, 103);
+            this.btnOrdenar2.Name = "btnOrdenar2";
+            this.btnOrdenar2.Size = new System.Drawing.Size(108, 40);
+            this.btnOrdenar2.TabIndex = 11;
+            this.btnOrdenar2.Text = "Ordenar";
+            this.btnOrdenar2.UseVisualStyleBackColor = true;
+            this.btnOrdenar2.Click += new System.EventHandler(this.btnOrdenar2_Click);
             // 
             // Form1
             // 
@@ -242,8 +308,14 @@
         private System.Windows.Forms.TextBox tbBuscar;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label NumAleatorios;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnBuscar2;
+        private System.Windows.Forms.TextBox tbBuscar2;
+        private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.ListBox lbNumeros2;
+        private System.Windows.Forms.Label lblResultado2;
+        private System.Windows.Forms.Button btnGenerar2;
+        private System.Windows.Forms.Button btnOrdenar2;
     }
 }
 
